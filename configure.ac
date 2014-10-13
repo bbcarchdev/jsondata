@@ -1,4 +1,4 @@
-AC_INIT([jsondata],[m4_esyscmd(sh tools/get-version.sh)])
+AC_INIT([jsondata],[m4_esyscmd(sh m4/get-version.sh)])
 
 AC_CONFIG_MACRO_DIR([m4])
 
