@@ -1,6 +1,6 @@
 DIST_SUBDIRS = bm t m4
 
-EXTRA_DIST = jd_path.h jd_utf8.h
+EXTRA_DIST = jd_path.h jd_utf8.h jsondata.pc.in
 
 SUBDIRS = . bm t
 
@@ -11,6 +11,10 @@ lib_LTLIBRARIES = libjsondata.la
 include_HEADERS = jsondata.h jd_pretty.h
 
 noinst_PROGRAMS = jdtest
+
+pkgconfigdir = $(libdir)/pkgconfig
+
+pkgconfig_DATA = jsondata.pc
 
 bin_PROGRAMS = jsonpretty
 

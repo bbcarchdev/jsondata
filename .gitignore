@@ -8,6 +8,7 @@
 *.obj
 *.so
 .*.sw?
+*.pc
 .DS_Store
 .deps
 .gdb_history

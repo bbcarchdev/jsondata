@@ -2,3 +2,4 @@ usr/lib/libjsondata.a
 usr/lib/libjsondata.la
 usr/include/jsondata.h
 usr/include/jd_pretty.h
+usr/lib/pkgconfig/jsondata.pc

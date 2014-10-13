@@ -52,6 +52,7 @@ Makefile
 bm/Makefile
 t/Makefile
 m4/Makefile
+jsondata.pc
 ])
 
 AC_OUTPUT
