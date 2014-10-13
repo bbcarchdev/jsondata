@@ -10,6 +10,10 @@ AC_CONFIG_HEADER([config.h])
 BT_PROG_XCODE
 AC_PROG_CC([clang gcc c99 cc])
 
+AC_MSG_CHECKING([API version])
+api_version=`cat $srcdir/VERSION`
+AC_MSG_RESULT([$api_version])
+AC_DEFINE_UNQUOTED([JSONDATA_API_VERSION], ["$api_version"], [Define to the current jsondata API version])
 
 AC_ARG_ENABLE(dtrace,
   [AS_HELP_STRING([--enable-dtrace],[Enable dtrace probes])])

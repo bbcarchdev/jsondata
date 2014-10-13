@@ -664,13 +664,13 @@ void *jd_ptr(jd_var *v) {
 
 jd_var *jd_version(jd_var *out) {
   jd_set_hash(out, 3);
-  jd_set_string(jd_get_ks(out, "version", 1), VERSION);
+  jd_set_string(jd_get_ks(out, "version", 1), JSONDATA_API_VERSION);
   return out;
 }
 
 void jd_require(const char *version) {
-  if (strcmp(version, VERSION) > 0)
-    jd_throw("Requires libjsondata %s, this is %s", version, VERSION);
+  if (strcmp(version, JSONDATA_API_VERSION) > 0)
+    jd_throw("Requires libjsondata %s, this is %s", version, JSONDATA_API_VERSION);
 }
 
 jd_var *jd_flatten(jd_var *out, jd_var *v) {
