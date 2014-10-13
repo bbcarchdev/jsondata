@@ -12,12 +12,12 @@ Description: A C library for handling JSON data structures.
 
 Package: libjsondata-dev
 Architecture: any
-Depends: ${misc:Depends}, libjsondata
+Depends: ${misc:Depends}, libjsondata (= ${binary:Version})
 Description: A C library for handling JSON data structures (development files)
 
 Package: jsondata-utils
 Architecture: any
-Depends: ${misc:Depends}, libjsondata
+Depends: ${misc:Depends}, libjsondata (= ${binary:Version})
 Description: A C library for handling JSON data structures (command-line utilities)
 
 
