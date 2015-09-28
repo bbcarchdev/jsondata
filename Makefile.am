@@ -100,3 +100,17 @@ rpm: dist
 	cp $(PACKAGE)-$(VERSION).tar.gz $(PKGRPMDIR)/SOURCES/
 	rpmbuild --quiet --nodeps --define="_topdir $(PKGRPMDIR)" -ba packaging/jsondata.spec
 	mv $(PKGRPMDIR)/RPMS/x86_64/$(PACKAGE)-$(VERSION)-*.x86_64.rpm .
+
+BRANCH ?= develop
+
+DEVELOP_SUBMODULES = m4
+
+checkout:
+	@for submod in $(DEVELOP_SUBMODULES) ; do \
+		echo "+++ Checking out the latest version of $$submod on $(BRANCH)" >&2 ; \
+		cd $$submod && \
+		git checkout $(BRANCH) && \
+		git pull && \
+		$(MAKE) checkout BRANCH=$(BRANCH) || exit $? && \
+		cd .. ; \
+	done
